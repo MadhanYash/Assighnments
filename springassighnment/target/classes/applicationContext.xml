@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<context:annotation-config />
+	<bean id="que1" class="springassighnment.Role"
+		factory-method="getObjA"></bean>
+		
+		<bean id="que2" class="springassighnment2.Avg">
+		<property name="n1" value="27"></property>
+		<property name="n2" value="65"></property>
+		<property name="n3" value="68"></property>
+		<property name="n4" value="22"></property>
+	</bean>
+	<bean id="que3" class="springassighnment3.Emi">
+		<property name="rate" value="7.8"></property>
+	</bean>
+	<bean id="dept"
+        class="springassighnment4.Department">
+        <property name="did" value="1"></property>
+        <property name="dname" value="developer"></property>  
+    </bean>
+	 <bean id="que4"
+        class="springassighnment.Employee">
+        <property name="eid" value="1"></property>
+        <property name="ename" value="nikhil"></property>
+        <property name="salary" value="40000.00"></property>
+    </bean>
+	<bean id="dept1"
+        class="springassighnment4.Department">
+        <property name="did" value="2"></property>
+        <property name="dname" value="developer"></property>  
+    </bean>
+	 <bean id="que4a"
+        class="springassighnment.Employee">
+        <property name="eid" value="2"></property>
+        <property name="ename" value="Pratik"></property>
+        <property name="salary" value="20001.00"></property>
+    </bean>
+	<bean id="que5" class="springassighnment5.Static"
+		factory-method="getObject"></bean>
+		<bean id="que6" class="springassighnment6.Vowels">
+     <property name="str">
+    <array>
+   <value>madhan</value>
+   <value>mohan</value>
+    <value>nani</value>
+
+    </array>
+
+    </property>	
+</bean>
+		<bean id="que7" class= "springassighnment7.Array2">
+		<constructor-arg>
+			<array>
+				<value>101</value>
+				<value>202</value>
+				<value>303</value>
+			</array>
+		</constructor-arg>
+	</bean>
+	<bean id="que7a" class="springassighnment.Array1">
+		<constructor-arg>
+			<array>
+				<value>67</value>
+				<value>89</value>
+				<value>400</value>
+			</array>
+		</constructor-arg>
+		<constructor-arg ref="que7"></constructor-arg>
+	</bean>
+	<bean id="que8" class="springassighnment8.Item">
+    <property 
+   name="item">
+   <list>
+   <value>laptop</value>
+  <value>Pen</value>
+   <value>phone</value>
+
+   </list>
+   </property>
+   </bean>
+	<bean id="que9a"
+        class="springassighnment9.Distance">
+        <property name="fromcity" value="mumbai"></property>
+        <property name="tocity" value="bangalore"></property>
+        <property name="distance" value="992"></property>
+    </bean>
+
+    <bean id="que9b"
+        class="springassighnment9.Distance">
+        <property name="fromcity" value="pune"></property>
+        <property name="tocity" value="tirupathi"></property>
+        <property name="distance" value="250"></property>
+    </bean>
+
+    <bean id="que9c"
+        class="springassighnment9.Distance">
+        <property name="fromcity" value="pune"></property>
+        <property name="tocity" value="delhi"></property>
+        <property name="distance" value="150"></property>
+    </bean>
+
+    <bean id="que9d"
+        class="springassighnment9.Distance">
+        <property name="fromcity" value="indore"></property>
+        <property name="tocity" value="tirupathi"></property>
+        <property name="distance" value="590"></property>
+    </bean>	
+    <bean class="springassighnment10.Student" id="que10">
+        <property name="std">
+            <map>
+                <entry key="madhan" value="80" />
+                <entry key="hemanth" value="90" />
+                <entry key="dinesh" value="95" />
+                <entry key="vidya" value="85" />
+            </map>
+        </property>
+
+    </bean>
+		<bean id="que11a" class="springassighnment11.Result">
+		<constructor-arg value="56"></constructor-arg>
+		<constructor-arg value="80"></constructor-arg>
+		<constructor-arg value="85"></constructor-arg>
+		<constructor-arg value="77"></constructor-arg>
+	</bean>
+
+	<bean id="que11b" class="springassighnment.Student">
+		<constructor-arg value="madhan"></constructor-arg>
+		<constructor-arg value="126"></constructor-arg>
+		<constructor-arg value="18-11-2000"></constructor-arg>
+		<constructor-arg value="10th"></constructor-arg>
+		<constructor-arg value="B"></constructor-arg>
+		<constructor-arg>
+			<ref bean="que11a" />
+		</constructor-arg>
+	</bean>
+
+	<bean id="que11c" class="springassighnment.Result">
+		<constructor-arg value="66"></constructor-arg>
+		<constructor-arg value="87"></constructor-arg>
+		<constructor-arg value="75"></constructor-arg>
+		<constructor-arg value="67"></constructor-arg>
+
+	</bean>
+	<bean id="que11d" class="springassighnment.Student">
+		<constructor-arg value="vidya"></constructor-arg>
+		<constructor-arg value="112"></constructor-arg>
+		<constructor-arg value="15-5-1998"></constructor-arg>
+		<constructor-arg value="12th"></constructor-arg>
+		<constructor-arg value="A"></constructor-arg>
+		<constructor-arg>
+			<ref bean="que11c" />
+		</constructor-arg>
+		</bean>
+		<bean id="que12a"
+        class="springassighnment12.Employee">
+        <property name="ename" value="madhan"></property>
+        <property name="salary" value="20000"></property>
+        <property name="dept" value="development"></property>
+    </bean>
+	  <bean id="que12b"
+        class="springassighnment12.Employee">
+        <property name="ename" value="vidya"></property>
+        <property name="salary" value="32000"></property>
+        <property name="dept" value="testing"></property>
+    </bean>
+	
+	  <bean id="que12c"
+        class="springassighnment12.Employee">
+        <property name="ename" value="dinesh"></property>
+        <property name="salary" value="34000"></property>
+        <property name="dept" value="t.l"></property>
+    </bean>
+	  <bean id="que12d"
+        class="springassighnment12.Employee">
+        <property name="ename" value="pooja"></property>
+        <property name="salary" value="36000"></property>
+        <property name="dept" value="manager"></property>
+    </bean>
+		<bean id="CustID"
+        class="springassighnment13.Movie">
+        <property name="moviename" value="RRR"></property>
+        <property name="showtime" value="3-6"></property>  
+        <property name="priceofticket" value="150"></property>
+        <property name="businessincrore" value="1000 crore"></property>  
+    </bean>
+		<bean id="que14" class="springassighnment14.ShapeFactory"
+		factory-method="getCircleObject"></bean>
+		<bean id="que14a" class="springassighnment14.ShapeFactory"
+		factory-method="getSquareObject"></bean>
+		<bean id="que14b" class="springassighnment14.ShapeFactory"
+		factory-method="getRectangleObject"></bean>
+		
+		
+		<bean id="Custid"
+        class="springassighnment15.Iteam">
+        <property name="id" value="1"></property>
+        <property name="custname" value="madhan"></property>  
+        <property name="iteam" ref="IteamID"/>
+    </bean>
+	 <bean id="IteamID"
+        class="springassighnment15.Iteam">
+        <property name="id" value="2"></property>
+        <property name="iname" value="shirt"></property>
+        <property name="price" value="400"></property>
+        <property name="cat" ref="CatID"/>
+    </bean>
+	<bean id="CatID"
+        class="springassighnment15.Categary">
+        
+        <property name="catagaryname" value="Cloth"></property>  
+    </bean>
+		
+		
+		
+		
+		</beans>
