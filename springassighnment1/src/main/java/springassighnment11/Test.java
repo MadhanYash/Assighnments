@@ -10,8 +10,8 @@ public class Test {
 public static void main(String[] args) {
 	List<Student> slist = new ArrayList<Student>();
 	ApplicationContext obj = new ClassPathXmlApplicationContext("que11.xml");
-	Student e1 = (Student) obj.getBean("que11b");
-	Student e2 = (Student) obj.getBean("que11d");
+	Student e1 = (Student) obj.getBean("springassighnment11");
+	Student e2 = (Student) obj.getBean("springassighnment11");
 
 	slist.add(e1);
 	slist.add(e2);
