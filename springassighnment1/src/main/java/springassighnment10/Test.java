@@ -8,7 +8,7 @@ public class Test {
 
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 
-        Student student = (Student) context.getBean("que10");
+        Student student = (Student) context.getBean("springassighnment10");
 
     
 
