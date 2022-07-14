@@ -6,7 +6,7 @@ public class RoleTest {
 	public static void main(String[] args) {
 		ApplicationContext obj = new ClassPathXmlApplicationContext("applicationContext.xml");
 		
-		Role o1=(Role) obj.getBean("que1");
+		Role o1=(Role) obj.getBean("springassighnment1");
 		o1.show();
 		
 	}
